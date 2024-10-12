@@ -1,0 +1,445 @@
+/* Variables */
+:root {
+    --bg-color: #e0e0e0;
+    --border-radius: 12px;
+    --dark-shadow: #a3a3a3;
+    --light-shadow: #ffffff;
+    --text-color: #333;
+
+    --font-family: 'Roboto', sans-serif;
+
+    --primary-bg-color: #007bff;
+    --primary-text-color: #ffffff;
+
+    --secondary-bg-color: #6c757d;
+    --secondary-text-color: #ffffff;
+
+    --success-bg-color: #28a745;
+    --success-text-color: #ffffff;
+
+    --danger-bg-color: #dc3545;
+    --danger-text-color: #ffffff;
+
+    --warning-bg-color: #ffc107;
+    --warning-text-color: #212529;
+
+    --info-bg-color: #17a2b8;
+    --info-text-color: #ffffff;
+
+    --light-bg-color: #f8f9fa;
+    --light-text-color: #212529;
+
+    --dark-bg-color: #343a40;
+    --dark-text-color: #ffffff;
+}
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+/* Grid system (like Bootstrap) */
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.col-sm-6 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.col-sm-4 {
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+/* Neumorphic Elements */
+.neumorphic {
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 8px 8px 16px var(--dark-shadow), -8px -8px 16px var(--light-shadow);
+    padding: var(--padding);
+    transition: box-shadow var(--transition-speed);
+}
+
+
+/* Inputs */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--bg-color);
+    box-shadow: inset 4px 4px 8px var(--dark-shadow), inset -4px -4px 8px var(--light-shadow);
+    font-size: 16px;
+    outline: none;
+}
+
+.input-field:focus {
+    box-shadow: inset 2px 2px 4px var(--dark-shadow), inset -2px -2px 4px var(--light-shadow);
+}
+
+/* Cards */
+.card {
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 8px 8px 16px var(--dark-shadow), -8px -8px 16px var(--light-shadow);
+    padding: var(--padding);
+    margin-bottom: 1.5rem;
+    transition: box-shadow var(--transition-speed);
+}
+
+.card:hover {
+    box-shadow: 4px 4px 8px var(--dark-shadow), -4px -4px 8px var(--light-shadow);
+}
+
+/* Modals */
+.modal {
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 16px 16px 32px var(--dark-shadow), -16px -16px 32px var(--light-shadow);
+    padding: var(--padding);
+    transition: all var(--transition-speed);
+    display: none;
+}
+
+.modal.show {
+    display: block;
+}
+
+/* Alerts */
+.alert {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 4px 4px 8px var(--dark-shadow), -4px -4px 8px var(--light-shadow);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: var(--bg-color);
+    box-shadow: 4px 4px 8px var(--dark-shadow), -4px -4px 8px var(--light-shadow);
+    border-radius: var(--border-radius);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+
+/* Base button styles */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Neumorphic button effect */
+.btn-neumorphic {
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 8px 8px 16px var(--dark-shadow), -8px -8px 16px var(--light-shadow);
+    color: var(--text-color);
+}
+
+/* Neumorphic button hover effect */
+.btn-neumorphic:hover {
+    box-shadow: 4px 4px 8px var(--dark-shadow), -4px -4px 8px var(--light-shadow);
+}
+
+/* Neumorphic button active effect */
+.btn-neumorphic:active {
+    box-shadow: inset 8px 8px 16px var(--dark-shadow), inset -8px -8px 16px var(--light-shadow);
+}
+
+/* Disabled state */
+.btn-neumorphic:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Neumorphic primary button */
+.btn-neumorphic-primary {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+}
+
+/* Neumorphic secondary button */
+.btn-neumorphic-secondary {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-text-color);
+}
+
+/* Neumorphic success button */
+.btn-neumorphic-success {
+    background-color: var(--success-bg-color);
+    color: var(--success-text-color);
+}
+
+/* Neumorphic danger button */
+.btn-neumorphic-danger {
+    background-color: var(--danger-bg-color);
+    color: var(--danger-text-color);
+}
+
+/* Neumorphic warning button */
+.btn-neumorphic-warning {
+    background-color: var(--warning-bg-color);
+    color: var(--warning-text-color);
+}
+
+/* Neumorphic info button */
+.btn-neumorphic-info {
+    background-color: var(--info-bg-color);
+    color: var(--info-text-color);
+}
+
+/* Neumorphic light button */
+.btn-neumorphic-light {
+    background-color: var(--light-bg-color);
+    color: var(--light-text-color);
+}
+
+/* Neumorphic dark button */
+.btn-neumorphic-dark {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+/* Button Sizes */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-lg {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.25rem;
+}
+
+
+  /* Profile Section */
+  .profile-section {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #f0f0f3;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 8px 8px 16px #ccc, -8px -8px 16px #fff;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Profile Layout */
+.profile-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 8px 8px 16px #ccc, -8px -8px 16px #fff;
+}
+
+.profile-details {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-details div {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.profile-details div strong {
+    font-weight: 700;
+    color: #666;
+    display: inline-block;
+    width: 150px;
+}
+
+/* Family Section */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-info div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.profile-info div strong {
+    font-weight: 700;
+    color: #666;
+    width: 200px;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 4px 4px 8px #ccc, -4px -4px 8px #fff;
+}
+
+/* Utility Styles */
+.text-center {
+    text-align: center;
+}
+
+
+/* Profile Details with Neumorphic Icons */
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 15px;
+}
+
+.profile-detail-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.icon-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    box-shadow: 8px 8px 16px #ccc, -8px -8px 16px #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.label-text {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Neumorphic effect for data value */
+.data-value {
+    background-color: #f0f0f3;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 16px #ccc, -8px -8px 16px #fff;
+    width: fit-content;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+/* For responsive layouts, adjust icon and text sizes */
+@media (max-width: 600px) {
+    .icon-label {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .label-text {
+        font-size: 0.8rem;
+    }
+
+    .data-value {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media print {
+    body * {
+        display: none !important;
+    }
+    body:after {
+        content: "Printing is not allowed!";
+        display: block !important;
+    }
+}
