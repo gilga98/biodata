@@ -271,12 +271,15 @@
 
     // Fetch the encrypted content when the page loads
     const currentUrl = window.location.href;
-
+    const queryStringArray = currentUrl.split('?');
+    const queryString = queryStringArray[1];
     const params = queryString.split('&').map(param => param.split('='));
     const paramValues = new Map(params);
 
     const paramName = 'userType';
-    const userType = paramValues.get(paramName);
+    const value = paramValues.get(paramName);
+    const defaultValue = 'others';
+    const userType = value || defaultValue;
 
     let password = prompt("Enter the password");
     
