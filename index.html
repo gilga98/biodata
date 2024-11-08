@@ -288,15 +288,6 @@
     
     checkPassword(password, userType);
 
-    // Detect when window loses focus (potential screenshot attempt)
-    window.addEventListener('blur', function() {
-            document.getElementById('content').style.visibility = 'hidden';
-        });
-
-        window.addEventListener('focus', function() {
-            document.getElementById('content').style.visibility = 'visible';
-        });
-
 </script>
 </body>
 </html>
